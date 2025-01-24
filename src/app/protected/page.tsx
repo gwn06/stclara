@@ -8,7 +8,7 @@ export default async function Protected() {
 
   const { data, error } = await supabase.auth.getUser();
   if (error || !data?.user) {
-    redirect("/sign-in");
+    redirect("/signin");
   }
   return (
     <div className="flex flex-col items-center h-screen mx-8 my-2">
